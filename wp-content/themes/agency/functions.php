@@ -140,20 +140,27 @@ add_action( 'widgets_init', 'agency_widgets_init' );
  * Enqueue scripts and styles.
  */
 function agency_scripts() {
+    // Swiper styles
     wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-    wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    
     wp_enqueue_style('styles', get_template_directory_uri() . '/styles/styles.css', array(), filemtime(get_template_directory() . '/styles/styles.css'), 'all');
+    
     wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
-    wp_enqueue_script('tailwind-script', 'https://cdn.tailwindcss.com');
+    
+    wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/styles/style.css', false, '1.0', 'all');
+    
     wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array(), null, true);
-    wp_enqueue_style( 'agency-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'agency-style', 'rtl', 'replace' );
+    
+    wp_enqueue_style('agency-style', get_stylesheet_uri(), array(), _S_VERSION);
+    
+    wp_style_add_data('agency-style', 'rtl', 'replace');
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }
-add_action( 'wp_enqueue_scripts', 'agency_scripts' );
+add_action('wp_enqueue_scripts', 'agency_scripts');
+
 
 /**
  * Implement the Custom Header feature.
