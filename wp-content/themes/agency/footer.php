@@ -11,7 +11,7 @@
 
 ?>
 </main>
-<footer class="lg:pt-[94px] lg:pb-[80px] py-10">
+<footer class="lg:pt-[94px] lg:pb-[80px] py-10 bg-[#0099FF0A]">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row justify-between">
             <div class="flex flex-col max-w-[307px] mb-8 lg:mb-0">
@@ -26,10 +26,11 @@
                 <?php if (have_rows('social_media_ft','option')): ?>
                     <ul class="flex mt-8">
                         <?php while (have_rows('social_media_ft','option')): the_row(); ?>
-                            <li class="mr-3.5"><a href="<?= get_sub_field('social_media_link_ft','option') ?>"><img
-                                            src="<?= get_sub_field('social_media_icon_ft','option') ?>"
-                                            width="25"
-                                            height="25" alt="Icon"></a></li>
+                            <li class="mr-3.5 ">
+                                <a href="<?= get_sub_field('social_media_link_ft','option') ?>" >
+                                    <img src="<?= get_sub_field('social_media_icon_ft','option') ?>" width="25" height="25" alt="Icon">
+                                </a>
+                            </li>
                         <?php endwhile; ?>
                     </ul>
                 <?php endif; ?>

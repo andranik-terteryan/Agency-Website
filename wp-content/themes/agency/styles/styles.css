@@ -56,3 +56,19 @@
         text-align: center;
     }
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0099FF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

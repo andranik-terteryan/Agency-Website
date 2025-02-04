@@ -1,6 +1,6 @@
 <section class="lg:py-[120px] py-12 bg-[#F2FAFF]">
     <div class="max-w-[956px] w-full mx-auto px-4">
-        <h4 class="font-semibold text-[#333333] text-xl sm:text-2xl md:text-3xl text-center">
+        <h4 class="font-semibold text-[#333333] text-xl sm:text-2xl text-center">
             <?= get_field('section_small_headline_faq', 'option') ?>
         </h4>
         <h2 class="text-3xl sm:text-4xl md:text-5xl text-[#333333] mt-4 font-bold text-center">

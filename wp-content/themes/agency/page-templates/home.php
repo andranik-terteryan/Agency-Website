@@ -9,7 +9,7 @@ get_header()
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between">
             <div class="max-w-full md:max-w-[632px] md:pt-[50px] w-full xl:pt-[168px] ">
-                <h1 class="lg:text-6xl text-4xl font-bold text-[#333333]">
+                <h1 class="text-4xl lg:text-6xl font-bold text-[#333333] leading-tight lg:leading-[70px]">
                     <?= get_field('section_headline') ?>
                 </h1>
                 <p class="text-base md:text-lg md:mt-8 mt-4 text-[#333333] font-normal">
@@ -41,7 +41,7 @@ get_header()
         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#333333] mt-3 sm:mt-5 font-bold text-center">
             <?= get_field('section_headline_sr') ?>
         </h2>
-        <p class="text-sm sm:text-base md:text-lg text-[#494949] text-center mt-6 sm:mt-8 max-w-[90%] sm:max-w-[612px] w-full mx-auto">
+        <p class="text-base text-[#494949] text-center mt-6 sm:mt-8 max-w-[90%] sm:max-w-[612px] w-full mx-auto">
             <?= get_field('section_description_sr') ?>
         </p>
 
@@ -55,7 +55,7 @@ get_header()
                             <img src="<?= get_sub_field('widget_icon') ?>"
                                  class="absolute top-0 left-0 w-full h-full object-cover" alt="Icon">
                         </div>
-                        <h3 class="mt-4 font-bold text-[32]\[42] text-[#333333]">
+                        <h3 class="text-[32px] leading-[42px] font-bold text-[#333333]">
                             <?= get_sub_field('widget_title') ?>
                         </h3>
                         <p class="mt-6 text-sm font-normal text-[#494949] text-center">
@@ -82,7 +82,7 @@ get_header()
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mt-3 sm:mt-4">
                     <?= get_field('section_headline_us') ?>
                 </h2>
-                <p class="text-sm sm:text-base md:text-lg mt-4 sm:mt-6 text-[#333333] font-normal">
+                <p class="text-sm sm:text-base mt-4 sm:mt-6 text-[#333333] font-normal">
                     <?= get_field('section_description_us') ?>
                 </p>
                 <button
@@ -130,10 +130,10 @@ get_header()
                                     <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
                                 </p>
                                 <a href="<?php the_permalink(); ?>"
-                                   class="font-semibold text-base sm:text-lg text-[#333333] mt-6 sm:mt-8 block">
+                                   class="font-semibold text-base sm:text-lg text-[#333333] mt-6 sm:mt-8 inline-block relative after:absolute after:bottom-0 pb-3 after:h-[2px] after:w-full after:bg-[#0099FF] after:left-0">
                                     <?= get_field('permalink_button_text', get_the_ID()) ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/global/arrow.svg"
-                                         class="inline-block w-4 h-3" alt="Icon">
+                                         class="inline-block w-4 h-5" alt="Icon">
                                 </a>
 
                             </div>

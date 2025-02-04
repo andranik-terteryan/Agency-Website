@@ -3,7 +3,7 @@
         <h2 class="text-3xl sm:text-4xl md:text-5xl text-[#333333] font-bold text-left">
             <?= get_field('section_headline_ts', 'option') ?>
         </h2>
-        <h4 class="font-normal text-base sm:text-lg md:text-xl text-[#333333] mt-6 text-left">
+        <h4 class="font-normal text-base text-[#333333] mt-6 text-left">
             <?= get_field('section_description_ts', 'option') ?>
         </h4>
 

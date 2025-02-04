@@ -6,7 +6,7 @@
         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mt-3 sm:mt-4 text-center">
             <?= get_field('section_headline_tm', 'option') ?>
         </h2>
-        <p class="text-sm sm:text-base md:text-lg mt-6 sm:mt-8 font-normal text-[#494949] text-center max-w-[90%] sm:max-w-[612px] w-full mx-auto">
+        <p class="text-sm sm:text-base mt-6 sm:mt-8 font-normal text-[#494949] text-center max-w-[90%] sm:max-w-[612px] w-full mx-auto">
             <?= get_field('section_description_tm', 'option') ?>
         </p>
         <?php if (have_rows('team_members', 'options')): ?>
